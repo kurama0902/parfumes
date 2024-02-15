@@ -2,9 +2,9 @@
 
 import { Slider } from "~/app/_components/slider";
 
-export default function Home() {
+export default function Cart() {
   return (
-    <div className="home-page-wrap">
+    <div className="cart-page-wrap">
       <Slider />
     </div>
   );

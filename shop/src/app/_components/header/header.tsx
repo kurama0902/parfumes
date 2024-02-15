@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import s from './header.module.css';
 
-export default function Header() {
+export function Header() {
     return (
         <header className={s['header-wrap']}>
             <Link className={s['logo-link']} href="/">
