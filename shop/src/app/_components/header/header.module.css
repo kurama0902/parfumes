@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Mont';
+    src: url('/fonts/Mont-ExtraLightDEMO.otf') format('opentype');
+}
+
+.header-wrap {
+    position: absolute;
+    display: flex;
+    max-width: 1420px;
+    width: 100%;
+    height: 87px;
+    color: white;
+    inset: 0;
+    margin-inline: auto;
+    padding-inline: 10px;
+    z-index: 1;
+}
+
+.logo-link {
+    align-self: flex-end;
+    width: max-content;
+    height: 43px;
+}
+
+.page-links-wrap {
+    display: flex;
+    width: inherit;
+    height: inherit;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.public-links {
+    display: flex;
+    padding-left: 77px;
+    padding-bottom: 4px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 499px;
+    width: 100%;
+}
+
+.public-links a {
+    color: rgb(255, 255, 255);
+    font-family: 'Mont', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 96.4%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.users-links {
+    display: flex;
+    height: inherit;
+    align-self: flex-end;
+    gap: 20px;
+}
+
+.liked-popup-btn,
+.user-page-btn,
+.cart-link {
+    position: relative;
+    background-color: white;
+    border: none;
+    width: 50px;
+}
+
+.liked-popup-btn img,
+.user-page-btn img,
+.cart-link img {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 14px;
+    margin-inline: auto;
+}
