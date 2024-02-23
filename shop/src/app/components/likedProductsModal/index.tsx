@@ -1,0 +1,1 @@
+export { LikedProductsModal } from "./likedModal";

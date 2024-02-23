@@ -1,0 +1,1 @@
+export { TypeOfProducts } from "./typeOfProducts";

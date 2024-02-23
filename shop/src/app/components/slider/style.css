@@ -1,0 +1,248 @@
+[class^="number-slide"],
+[class*=" number-slide"] {
+  max-width: 1920px;
+  height: 896px;
+}
+
+.number-slide1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/bannerBG.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+.hit-sales-wrap {
+  max-width: 1420px;
+  width: 100%;
+}
+
+.hit-sales {
+  width: 737px;
+  height: 431px;
+}
+
+.hit-sales-label {
+  color: rgb(255, 255, 255);
+  font-family: 'Lighthaus';
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 74.9%;
+  text-align: left;
+}
+
+.hit-sales-label::after {
+  content: " ";
+  width: 623px;
+  height: 1px;
+  background-color: white;
+  display: block;
+  margin-top: 49.5px;
+  margin-bottom: 50.5px;
+}
+
+.hit-sales-product {
+  color: rgb(255, 255, 255);
+  font-family: 'Mont';
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 96.4%;
+  letter-spacing: 0%;
+  width: 533px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.hit-sale-price-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 326px;
+  margin-bottom: 41px;
+}
+
+.hit-sales-price-label {
+  color: rgb(255, 255, 255);
+  font-family: 'Mont';
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 96.4%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.hit-sales-price {
+  color: rgb(255, 255, 255);
+  font-family: 'Mont';
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 96.4%;
+  text-align: left;
+}
+
+.hit-buy-btn {
+  width: 327px;
+  height: 50px;
+  background: linear-gradient(150.16deg, rgb(94, 57, 40) 19.981%, rgb(228, 161, 111) 92.915%);
+  border: none;
+
+  color: rgb(255, 255, 255);
+  font-family: 'Mont';
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 96.4%;
+  text-align: center;
+}
+
+.number-slide2 {
+  background: rgb(255, 75, 64);
+  background: linear-gradient(128deg,
+      rgba(255, 154, 63, 1) 0%,
+      rgba(255, 75, 64, 1) 100%);
+}
+
+.number-slide3 {
+  background: rgb(182, 255, 64);
+  background: linear-gradient(128deg,
+      rgba(182, 255, 64, 1) 0%,
+      rgba(63, 255, 71, 1) 100%);
+  background: linear-gradient(128deg,
+      rgba(189, 255, 83, 1) 0%,
+      rgba(43, 250, 82, 1) 100%);
+}
+
+.navigation-wrapper {
+  position: relative;
+}
+
+.dots {
+  display: flex;
+  position: absolute;
+  inset-inline: 0;
+  margin-inline: auto;
+  max-width: 1420px;
+  width: 100%;
+  padding: 10px 0;
+  justify-content: flex-start;
+  bottom: 150px;
+  /* left: 174px; */
+}
+
+.dot {
+  border: none;
+  width: 12px;
+  height: 12px;
+  background: rgb(255, 255, 255);
+  margin: 0 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dot:focus {
+  outline: none;
+}
+
+.dot.active {
+  background-image: linear-gradient(rgb(94, 57, 40), rgb(228, 161, 111));
+}
+
+.arrow-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 87px;
+  height: 50px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: #fff;
+  cursor: pointer;
+}
+
+.arrow--left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.arrow--right {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: auto;
+  right: 0;
+
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+
+}
+
+.arrow--disabled {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1645px) {
+  .hit-sales-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dots {
+    max-width: 737px;
+  }
+}
+
+@media (max-width: 935px) {
+
+  .hit-sales-wrap {
+    justify-content: start;
+    padding-inline: 36px;
+  }
+
+  .hit-sales {
+    width: 464px;
+  }
+
+  .hit-sales-label {
+    font-size: 60px;
+  }
+
+  .hit-sales-label::after {
+    max-width: 388px;
+  }
+
+  .hit-sales-product {
+    width: 357px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 128.4%;
+  }
+
+  .hit-sales-price-label,
+  .hit-sales-price {
+    font-size: 30px;
+  }
+
+  .hit-buy-btn {
+    width: 244px;
+    height: 50px;
+  }
+
+  .arrow-wrap {
+    display: none;
+  }
+
+  .dots {
+    left: 36px;
+    max-width: none;
+  }
+}

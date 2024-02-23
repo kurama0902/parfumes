@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/_components/slider/index.tsx"
+    "src/app/components/slider/index.tsx"
   ],
   "exclude": ["node_modules"]
 }

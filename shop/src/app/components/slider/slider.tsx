@@ -1,8 +1,8 @@
 import React, { ReactNode, useState } from "react";
-import "./style.css";
 import { useKeenSlider } from "keen-slider/react";
-import Image from "next/image";
+
 import "keen-slider/keen-slider.min.css";
+import "./style.css";
 
 export function Slider() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -20,7 +20,19 @@ export function Slider() {
   return (
     <div className="navigation-wrapper">
       <div ref={sliderRef} className="keen-slider">
-        <div className="keen-slider__slide number-slide1">1</div>
+        <div className="keen-slider__slide number-slide1">
+          <div className="hit-sales-wrap">
+            <div className="hit-sales">
+              <h1 className="hit-sales-label">ХІТ ПРОДАЖУ</h1>
+              <h1 className="hit-sales-product">Дистилятор для ефірних масел</h1>
+              <div className="hit-sale-price-wrap">
+                <p className="hit-sales-price-label">Ціна</p>
+                <p className="hit-sales-price">1987 грн</p>
+              </div>
+              <button className="hit-buy-btn">Замовити</button>
+            </div>
+          </div>
+        </div>
         <div className="keen-slider__slide number-slide2">2</div>
         <div className="keen-slider__slide number-slide3">3</div>
         {loaded && instanceRef.current && (
@@ -75,9 +87,8 @@ function Arrow(props: {
   return (
     <div
       onClick={props.onClick}
-      className={`arrow-wrap ${
-        props.left ? "arrow--left" : "arrow--right"
-      } ${disabled}`}
+      className={`arrow-wrap ${props.left ? "arrow--left" : "arrow--right"
+        } ${disabled}`}
     >
       <svg
         width="17.846283"

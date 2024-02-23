@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'Mont';
-    src: url('/fonts/Mont-ExtraLightDEMO.otf') format('opentype');
-}
-
 .header-wrap {
     position: absolute;
     display: flex;
@@ -61,6 +56,7 @@
 .liked-popup-btn,
 .user-page-btn,
 .cart-link {
+    cursor: pointer;
     position: relative;
     background-color: white;
     border: none;
@@ -74,4 +70,25 @@
     inset-inline: 0;
     bottom: 14px;
     margin-inline: auto;
+}
+
+@media (max-width: 935px) {
+    .public-links {
+        max-width: 634px;
+        padding-inline: 36px;
+        position: absolute;
+        top: 139px;
+        inset-inline: 0;
+        margin: auto;
+    }
+
+    .page-links-wrap {
+        justify-content: end;
+    }
+
+
+    .header-wrap {
+        max-width: 1472px;
+        padding-inline: 36px;
+    }
 }
