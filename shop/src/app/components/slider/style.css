@@ -186,6 +186,22 @@
 
 }
 
+.embla .arrow-wrap {
+  background-color: transparent;
+}
+
+.embla .arrow--left {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.embla .arrow--right {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
 .arrow--disabled {
   fill: rgba(255, 255, 255, 0.5);
 }
