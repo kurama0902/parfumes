@@ -1,0 +1,74 @@
+.proposalWrap {
+    display: flex;
+    align-items: center;
+    height: 483px;
+    background-color: rgba(0, 0, 0, 0.658);
+    background-image: url('/proposal.jpg');
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+}
+
+.proposal {
+    display: flex;
+    flex-direction: column;
+    max-width: 533px;
+    margin-left: 261px;
+    gap: 50px;
+}
+
+.proposalLabel {
+    color: #fff;
+    font-family: Lighthaus;
+    font-size: 140px;
+    font-weight: 400;
+    line-height: 78%;
+}
+
+.proposalDescription {
+    color: #fff;
+    font-family: Mont;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.catalogBtn {
+    display: flex;
+    font-family: Mont;
+    font-size: 18px;
+    font-weight: 800;
+    max-width: 327px;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(150.16deg, rgb(94, 57, 40) 19.981%, rgb(228, 161, 111) 92.915%);
+    color: #fff;
+    border: none;
+}
+
+@media (width <= 935px) {
+    .proposal {
+        margin-left: 52px;
+    }
+}
+
+@media (width <= 585px) {
+
+    .proposalWrap {
+        align-items: normal;
+    }
+
+    .proposal {
+        margin-top: 50px;
+        max-width: 290px;
+        gap: 18px;
+    }
+
+    .proposalLabel {
+        font-size: 60px;
+    }
+
+    .proposalDescription {
+        font-size: 14px;
+    }
+}

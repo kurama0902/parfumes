@@ -24,8 +24,8 @@
     justify-content: center;
     max-width: 1420px;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, 445px);
-    grid-auto-rows: 491px;
+    grid-template-columns: repeat(3, minmax(213px, 445px));
+    grid-template-rows: repeat(2, 441px);
     gap: 32px;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .type-description {
-    width: 357px;
+    max-width: 357px;
     position: absolute;
     margin-inline: auto;
     inset-inline: 0;
@@ -89,28 +89,32 @@
 
 .gradient-2 {
     top: auto;
-    height: 205px;
+    max-height: 205px;
+    height: 100%;
     background: linear-gradient(180.00deg, rgba(7, 44, 38, 0.5), rgba(7, 44, 38, 0) 100%);
     transform: rotate(-180deg);
 }
 
 .gradient-3 {
     top: auto;
-    height: 205px;
+    max-height: 205px;
+    height: 100%;
     background: linear-gradient(180.00deg, rgba(7, 44, 38, 0.5), rgba(7, 44, 38, 0) 100%);
     transform: rotate(-180deg);
 }
 
 .gradient-4 {
     top: auto;
-    height: 197px;
+    max-height: 197px;
+    height: 100%;
     background: linear-gradient(180.00deg, rgba(7, 44, 38, 0.5) 16.042%, rgba(7, 44, 38, 0) 77.708%);
     transform: rotate(-180deg);
 }
 
 .gradient-5 {
     top: auto;
-    height: 205px;
+    max-height: 205px;
+    height: 100%;
     background: linear-gradient(180.00deg, rgba(7, 44, 38, 0.5), rgba(7, 44, 38, 0) 100%);
     transform: rotate(-180deg);
 }
@@ -122,18 +126,42 @@
     background-position: center center;
 }
 
-@media (max-width: 941px) {
+@media (width <= 550px) {
+    .type-of-products {
+        font-size: 12px;
+        grid-template-columns: repeat(2, 134.43px);
+        grid-template-rows: repeat(3, 148.33px);
+    }
+
+    .type-description {
+        font-size: 15px;
+        bottom: 10px
+    }
+
+    .label {
+        font-size: 24px;
+    }
+}
+
+@media ((width >= 550px ) and (width <= 720px)) {
+    .type-of-products {
+        font-size: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 235px);
+    }
+}
+
+@media ((width >= 721px) and (width <= 1125px)) {
     .type-of-products-wrap {
         align-items: center;
     }
 
     .type-of-products {
-        grid-template-columns: repeat(auto-fill, 213px);
-        grid-auto-rows: 235px;
+        grid-template-rows: repeat(2, 235px);
     }
 
     .type-description {
-        width: 214px;
+        max-width: 214px;
         font-size: 20px;
         font-weight: 600;
         line-height: 96.4%;

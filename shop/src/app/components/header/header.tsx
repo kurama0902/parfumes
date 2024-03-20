@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { LikedProductsModal } from "../likedProductsModal/";
+import { MobileMenu } from "../mobileMenu";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -10,6 +11,7 @@ import s from "./header.module.css";
 
 export function Header() {
   const [visibility, setVisibility] = useState<boolean>(false);
+  const [mobMenuVisibility, setMobMenuVisibility] = useState<boolean>(false);
 
   const closeModal = () => {
     document.body.style.overflow = "scroll";
@@ -21,11 +23,16 @@ export function Header() {
     setVisibility(true);
   };
 
+  const handleOpenMobMenu = () => {
+    document.body.style.overflow = "hidden";
+    setMobMenuVisibility(true);
+  };
+
   return (
     <>
-      <header className={s["header-wrap"]}>
-        <Link className={s["logo-link"]} href="/">
-          <Image
+      <header className={s.headerWrap}>
+        <Link className={s.logoLink} href="/">
+          <Image className={s.logoImg}
             src="/logo.svg"
             width={160}
             height={43}
@@ -33,8 +40,8 @@ export function Header() {
             alt="Copper Pro"
           />
         </Link>
-        <nav className={s["page-links-wrap"]}>
-          <ul className={s["public-links"]}>
+        <nav className={s.pageLinksWrap}>
+          <ul className={s.publicLinks}>
             <Link className="catalog-link" href="/catalog">
               Каталог
             </Link>
@@ -51,8 +58,8 @@ export function Header() {
               Контакти
             </Link>
           </ul>
-          <ul className={s["users-links"]}>
-            <button onClick={handleOpenModal} className={s["liked-popup-btn"]}>
+          <ul className={s.userLinks}>
+            <button onClick={handleOpenModal} className={s.likedPopupBtn}>
               <Image
                 src="/heart.svg"
                 width={30}
@@ -61,7 +68,7 @@ export function Header() {
                 alt="Liked button"
               />
             </button>
-            <button className={s["user-page-btn"]}>
+            <button className={s.userPageBtn}>
               <Image
                 src="/user.svg"
                 width={30}
@@ -70,7 +77,7 @@ export function Header() {
                 alt="User page button"
               />
             </button>
-            <Link className={s["cart-link"]} href="/cart">
+            <Link className={s.cartLink} href="/cart">
               <Image
                 src="/cart.svg"
                 width={30}
@@ -79,12 +86,16 @@ export function Header() {
                 alt="Cart link"
               />
             </Link>
+            <button onClick={handleOpenMobMenu} className={s.mobMenuBtn}>
+              <Image src="/burger-menu.svg" width={20} height={20} unoptimized alt="menu button"/>
+            </button>
           </ul>
         </nav>
       </header>
       {visibility && (
         <LikedProductsModal visibility={visibility} closeModal={closeModal} />
       )}
+      {mobMenuVisibility && <MobileMenu />}
     </>
   );
 }

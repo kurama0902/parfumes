@@ -1,4 +1,4 @@
-.header-wrap {
+.headerWrap {
     position: absolute;
     display: flex;
     max-width: 1420px;
@@ -11,13 +11,13 @@
     z-index: 1;
 }
 
-.logo-link {
+.logoLink {
     align-self: flex-end;
     width: max-content;
     height: 43px;
 }
 
-.page-links-wrap {
+.pageLinksWrap {
     display: flex;
     width: inherit;
     height: inherit;
@@ -25,7 +25,7 @@
     justify-content: space-between;
 }
 
-.public-links {
+.publicLinks {
     display: flex;
     padding-left: 77px;
     padding-bottom: 4px;
@@ -35,7 +35,7 @@
     width: 100%;
 }
 
-.public-links a {
+.publicLinks a {
     color: rgb(255, 255, 255);
     font-family: 'Mont', sans-serif;
     font-size: 16px;
@@ -46,16 +46,16 @@
     text-decoration: none;
 }
 
-.users-links {
+.userLinks {
     display: flex;
     height: inherit;
     align-self: flex-end;
     gap: 20px;
 }
 
-.liked-popup-btn,
-.user-page-btn,
-.cart-link {
+.likedPopupBtn,
+.userPageBtn,
+.cartLink {
     cursor: pointer;
     position: relative;
     background-color: white;
@@ -63,17 +63,28 @@
     width: 50px;
 }
 
-.liked-popup-btn img,
-.user-page-btn img,
-.cart-link img {
+.likedPopupBtn img,
+.userPageBtn img,
+.cartLink img {
     position: absolute;
     inset-inline: 0;
     bottom: 14px;
     margin-inline: auto;
 }
 
-@media (max-width: 935px) {
-    .public-links {
+.mobMenuBtn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 40px;
+    background: linear-gradient(150.16deg, rgb(94, 57, 40) 18.544%, rgb(228, 161, 111) 92.788%);
+    border: none;
+    align-self: flex-end;
+}
+
+@media (width <= 935px) {
+    .publicLinks {
         max-width: 634px;
         padding-inline: 36px;
         position: absolute;
@@ -82,13 +93,37 @@
         margin: auto;
     }
 
-    .page-links-wrap {
+    .pageLinksWrap {
         justify-content: end;
     }
 
 
-    .header-wrap {
+    .headerWrap {
         max-width: 1472px;
         padding-inline: 36px;
+    }
+}
+
+
+@media (width <= 500px) {
+
+    .mobMenuBtn {
+        display: flex;
+    }
+
+    .publicLinks {
+        display: none;
+    }
+
+    .likedPopupBtn {
+        display: none;
+    }
+
+    .headerWrap {
+        padding-right: 0;
+    }
+
+    .logoImg {
+        width: 115px;
     }
 }

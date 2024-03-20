@@ -1,0 +1,19 @@
+.mobileMenuWrap {
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(150.16deg, rgb(94, 57, 40) -29.809%, rgb(228, 161, 111) 88.506%);
+    animation: showMenu .3s forwards;
+    z-index: 1;
+}
+
+@keyframes showMenu {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}

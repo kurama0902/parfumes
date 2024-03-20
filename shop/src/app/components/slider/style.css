@@ -19,7 +19,7 @@
 }
 
 .hit-sales {
-  width: 737px;
+  max-width: 737px;
   height: 431px;
 }
 
@@ -28,13 +28,13 @@
   font-family: 'Lighthaus';
   font-size: 100px;
   font-weight: 400;
-  line-height: 74.9%;
+  line-height: 50px;
   text-align: left;
 }
 
 .hit-sales-label::after {
   content: " ";
-  width: 623px;
+  max-width: 623px;
   height: 1px;
   background-color: white;
   display: block;
@@ -49,7 +49,7 @@
   font-weight: 800;
   line-height: 96.4%;
   letter-spacing: 0%;
-  width: 533px;
+  max-width: 533px;
   text-align: left;
   margin-bottom: 40px;
 }
@@ -57,7 +57,7 @@
 .hit-sale-price-wrap {
   display: flex;
   justify-content: space-between;
-  width: 326px;
+  max-width: 326px;
   margin-bottom: 41px;
 }
 
@@ -81,6 +81,7 @@
 }
 
 .hit-buy-btn {
+  cursor: pointer;
   width: 327px;
   height: 50px;
   background: linear-gradient(150.16deg, rgb(94, 57, 40) 19.981%, rgb(228, 161, 111) 92.915%);
@@ -125,7 +126,7 @@
   padding: 10px 0;
   justify-content: flex-start;
   bottom: 150px;
-  /* left: 174px; */
+  gap: 10px;
 }
 
 .dot {
@@ -133,7 +134,7 @@
   width: 12px;
   height: 12px;
   background: rgb(255, 255, 255);
-  margin: 0 10px;
+  /* margin: 0 10px; */
   padding: 5px;
   cursor: pointer;
 }
@@ -217,7 +218,7 @@
   }
 }
 
-@media (max-width: 935px) {
+@media (width <=935px) {
 
   .hit-sales-wrap {
     justify-content: start;
@@ -225,7 +226,7 @@
   }
 
   .hit-sales {
-    width: 464px;
+    max-width: 464px;
   }
 
   .hit-sales-label {
@@ -237,7 +238,7 @@
   }
 
   .hit-sales-product {
-    width: 357px;
+    max-width: 357px;
     font-size: 30px;
     font-weight: 800;
     line-height: 128.4%;
@@ -260,5 +261,45 @@
   .dots {
     left: 36px;
     max-width: none;
+  }
+}
+
+@media (width <= 500px) {
+
+  .hit-sales-label {
+    font-size: 30px;
+  }
+
+  .hit-sales-product {
+    font-size: 20px;
+  }
+
+  .hit-sales-price-label,
+  .hit-sales-price {
+    font-size: 16px;
+  }
+
+  .hit-sales-label::after {
+    margin-top: 19.5px;
+    margin-bottom: 15.5px;
+    max-width: 213px;
+  }
+
+  .hit-buy-btn {
+    max-width: 155px;
+    width: 100%;
+  }
+
+  .hit-sales {
+    max-width: 213px;
+    margin-top: 130px;
+  }
+
+  .hit-sale-price-wrap {
+    max-width: 157px;
+  }
+
+  .number-slide1 {
+    align-items: normal;
   }
 }
