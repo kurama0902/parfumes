@@ -4,11 +4,12 @@ import { Slider } from "~/app/components/slider";
 import { TypeOfProducts } from "./components/typeOfProducts";
 import { EmblaOptionsType } from 'embla-carousel'
 import { EmblaCarousel } from "./components/categorySlider";
+import { Proposal } from "./components/proposal";
+import { ProductInfo } from "./components/productInfo";
+import { ReviewsInfo } from "./components/reviewsInfo";
 
 import './base.css'
 import './embla.css'
-import { Proposal } from "./components/proposal";
-import { ProductInfo } from "./components/productInfo";
 
 export default function Home() {
 
@@ -32,6 +33,9 @@ export default function Home() {
       </EmblaCarousel>
       <EmblaCarousel slides={SLIDES} options={OPTIONS} sectionName="Скидки">
         <ProductInfo sale={true} />
+      </EmblaCarousel>
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} sectionName={'ВІДГУКИ'}>
+        <ReviewsInfo />
       </EmblaCarousel>
     </div>
   );

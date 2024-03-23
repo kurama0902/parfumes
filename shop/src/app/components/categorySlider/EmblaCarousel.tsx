@@ -11,7 +11,6 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
-import { ProductInfo } from '../productInfo'
 
 const TWEEN_FACTOR_BASE = 0.84
 
@@ -23,6 +22,7 @@ type PropType = {
   options?: EmblaOptionsType
   sectionName: String
   children: ReactNode
+  isReview?: Boolean
 }
 
 export const EmblaCarousel: React.FC<PropType> = (props) => {

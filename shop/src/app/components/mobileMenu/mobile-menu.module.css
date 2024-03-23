@@ -2,10 +2,78 @@
     top: 0;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     background: linear-gradient(150.16deg, rgb(94, 57, 40) -29.809%, rgb(228, 161, 111) 88.506%);
     animation: showMenu .3s forwards;
     z-index: 1;
+}
+
+.closeAnimation {
+    animation: hideMenu .3s forwards;
+}
+
+.mobileMenu {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+    min-height: 312px;
+    gap: 32px;
+}
+
+.menuLink {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Mont';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mobBtns {
+    display: flex;
+    height: 100px;
+    position: absolute;
+    align-self: flex-end;
+    gap: 20px;
+    top: 0;
+}
+
+.likedPopupBtn,
+.userPageBtn,
+.cartLink {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    position: relative;
+    background-color: white;
+    padding-bottom: 10px;
+    border: none;
+    width: 50px;
+}
+
+.closeModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 33px;
+    right: 32px;
+    border: none;
+    border-radius: 100%;
+    background-color: transparent;
+
+}
+
+.closeModal:hover {
+    background-color: rgba(255, 255, 255, 0.363);
 }
 
 @keyframes showMenu {
@@ -15,5 +83,15 @@
 
     to {
         left: 0;
+    }
+}
+
+@keyframes hideMenu {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100%;
     }
 }

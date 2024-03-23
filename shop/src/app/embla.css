@@ -187,6 +187,10 @@
     width: 70px;
     border: none;
   }
+
+  .embla-wrap:last-child .embla__button {
+    top: 85%;
+  }
 }
 
 @media (width <= 500px) {

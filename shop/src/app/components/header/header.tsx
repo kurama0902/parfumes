@@ -95,7 +95,7 @@ export function Header() {
       {visibility && (
         <LikedProductsModal visibility={visibility} closeModal={closeModal} />
       )}
-      {mobMenuVisibility && <MobileMenu />}
+      {mobMenuVisibility && <MobileMenu setMobMenuVisibility={setMobMenuVisibility} />}
     </>
   );
 }

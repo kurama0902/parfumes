@@ -1,0 +1,64 @@
+.reviewsWrap {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(33.3% - 30px);
+    min-height: 332px;
+    padding: 21px 40px 18px 30px;
+    gap: 18px;
+}
+
+.reviewUserImg {
+    object-fit: cover;
+}
+
+.userName {
+    color: #031412;
+    font-family: Mont;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.review {
+    color: #031412;
+    font-family: Mont;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.date {
+    color: #031412;
+    font-family: Mont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+@media (width <= 720px) {
+    .reviewsWrap:not(:last-child) {
+        display: none;
+    }
+
+    .productSectionInfo {
+        width: 100%;
+    }
+}
+
+@media (width <= 1100px) {
+
+    .review-section .embla__button {
+        display: none;
+    }
+
+    .reviewsWrap:first-of-type {
+        display: none;
+    }
+
+    .reviewsWrap {
+        max-width: none;
+        width: auto;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
