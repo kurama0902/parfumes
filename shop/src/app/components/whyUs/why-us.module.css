@@ -1,0 +1,88 @@
+.whyUsWrap {
+    padding-top: 80px;
+    background-color: rgba(11, 63, 55, 0.15);
+    min-height: 700px;
+}
+
+.whyUsLabel {
+    color: #031412;
+    text-align: center;
+    font-family: Lighthaus;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+}
+
+.descriptionWrap {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, minmax(150px, 350px));
+    margin-inline: auto;
+    margin-top: 49px;
+    column-gap: 49px;
+    row-gap: 34px;
+    padding-inline: 10px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgWrap {
+    display: flex;
+    width: 76px;
+    height: 76px;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/whyUsImgs/bg.png');
+    margin-bottom: 24px;
+}
+
+.text {
+    color: #031412;
+    font-family: Mont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 134.4%;
+    margin-bottom: 15px;
+}
+
+.characteristic {
+    color: #031412;
+    font-family: Mont;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    font-family: Mont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 134.4%;
+    background: linear-gradient(66deg, #5E3928 -24.09%, #E4A16F 104.02%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    gap: 7px;
+}
+
+@media (width <= 500px) {
+    .whyUsLabel {
+        font-size: 24px;
+    }
+}
+
+@media (width <= 875px) {
+    .descriptionWrap {
+        grid-template-columns: repeat(2, minmax(150px, 350px));
+    }
+}

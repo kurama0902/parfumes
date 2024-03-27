@@ -2,10 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import s from './mobile-menu.module.css'
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 
 type visibilityOptions = {
-    setMobMenuVisibility: Function; // ??
+    setMobMenuVisibility: React.Dispatch<SetStateAction<boolean>>;
 }
 
 export const MobileMenu = ({setMobMenuVisibility}: visibilityOptions) => {
