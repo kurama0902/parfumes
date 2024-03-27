@@ -1,0 +1,5 @@
+.footerWrap {
+    min-height: 600px;
+    background-image: url('/proposal.jpg');
+    background-repeat: no-repeat;
+}

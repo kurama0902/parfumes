@@ -8,6 +8,8 @@ import { Proposal } from "./components/proposal";
 import { ProductInfo } from "./components/productInfo";
 import { ReviewsInfo } from "./components/reviewsInfo";
 import { WhyUs } from "./components/whyUs";
+import { Footer } from "./components/Footer";
+
 
 import './base.css'
 import './embla.css'
@@ -39,6 +41,7 @@ export default function Home() {
         <ReviewsInfo />
       </EmblaCarousel>
       <WhyUs />
+      <Footer />
     </div>
   );
 }

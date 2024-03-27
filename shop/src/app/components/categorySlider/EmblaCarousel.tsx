@@ -96,7 +96,7 @@ export const EmblaCarousel: React.FC<PropType> = (props) => {
   }, [emblaApi, tweenOpacity])
 
   return (
-    <div className="embla-wrap">
+    <div className={sectionName === 'ВІДГУКИ' ? 'embla-wrap rew' : 'embla-wrap'}>
       <div className="embla">
         <p className='category-label'>{sectionName}</p>
         <div className="embla__viewport" ref={emblaRef}>
