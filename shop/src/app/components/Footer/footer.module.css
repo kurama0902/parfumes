@@ -1,5 +1,166 @@
 .footerWrap {
-    min-height: 600px;
-    background-image: url('/proposal.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    position: relative;
+    background-image: url(/proposal.jpg);
     background-repeat: no-repeat;
+    padding-inline: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1471px;
+    width: 100%;
+}
+
+.goUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient(92deg, #5E3928 20.13%, #E4A16F 92.93%);
+    width: 150px;
+    height: 50px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    bottom: 51px;
+    right: 116px;
+    color: #FFF;
+    text-decoration: none;
+    font-family: Mont;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.confidentiality {
+    display: flex;
+    max-width: 229px;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.confText {
+    color: #ADADAD;
+    font-family: Mont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 134.4%;
+}
+
+.confPolitics {
+    color: #FFF;
+    font-family: Mont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 134.4%;
+    text-decoration-line: underline;
+}
+
+.navigationWrap {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.navWrap,
+.catalogWrap,
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.navWrap {
+    margin-right: 137px;
+}
+
+.catalogWrap {
+    margin-right: 93px;
+}
+
+.navLabel,
+.catLabel,
+.conLabel {
+    color: #FFF;
+    font-family: Mont;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 96.4%;
+}
+
+.navLink, .address, .number, .email {
+    color: #FFF;
+    font-family: Mont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 134.4%;
+    text-decoration: none;
+}
+
+
+@media ((width > 645px) and (width <= 875px)) {
+
+    .footerWrap {
+        min-height: 600px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .goUp {
+        right: 0;
+    }
+
+    .navWrap {
+        margin-right: 69px;
+    }
+
+    .catalogWrap {
+        margin-right: 70px;
+    }
+}
+
+@media (width <= 645px) {
+    .footerWrap {
+        min-height: 800px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .navigationWrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalogWrap {
+        order: 2;
+    }
+
+    .contacts {
+        order: 3;
+    }
+
+    .navWrap {
+        margin-right: 39px;
+    }
+    
+    .catalogWrap {
+        margin-right: 0;
+    }
+
+    .goUp {
+        right: -15px;
+    }
 }

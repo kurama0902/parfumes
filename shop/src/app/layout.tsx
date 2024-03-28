@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="layout">
+        <div className="layout" id="anchor">
           <Header />
           {children}
         </div>
